@@ -17,19 +17,17 @@ function criarCoracao() {
     coracao.classList.add("coracao");
     coracao.textContent = "❤️";
 
-    // Posiciona aleatoriamente na tela
     coracao.style.left = Math.random() * 100 + "vw";
     coracao.style.animationDuration = Math.random() * 2 + 3 + "s";  // Tempo de queda aleatório
 
     document.getElementById("coracoes").appendChild(coracao);
 
-    // Remove o coração depois que ele caiu
+
     setTimeout(() => {
         coracao.remove();
-    }, 5000);  // 5 segundos para remover
+    }, 5000); 
 }
 
-// Cria corações caindo a cada 200ms
 setInterval(criarCoracao, 200);
 
 setInterval(atualizarTempo, 1000);
